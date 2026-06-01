@@ -1,0 +1,573 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f9fc;
+    color:#1e293b;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =====================
+   HEADER
+===================== */
+
+header{
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+}
+
+.logo img{
+    height: 80px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    color:#1e293b;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#22c55e;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-weight:600;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.btn-green{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-green:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    background:white;
+    border:2px solid #22c55e;
+    color:#22c55e;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:#22c55e;
+    color:white;
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero{
+    padding:80px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    background:#dcfce7;
+    color:#16a34a;
+    padding:8px 15px;
+    border-radius:20px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#22c55e;
+}
+
+.hero p{
+    color:#64748b;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.hero-image img{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+/* =====================
+   CARDS
+===================== */
+
+.advantages {
+    padding: 60px 0;
+    background: white;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.advantage-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 24px;
+    transition: 0.2s;
+    border: 1px solid #e2e8f0;
+}
+
+.advantage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #22c55e;
+}
+
+/* КАРТИНКА СЛЕВА */
+.advantage-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ТЕКСТ СПРАВА */
+.advantage-text h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+    color: #0b2b3b;
+}
+
+.advantage-text p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* =====================
+   SERVICES
+===================== */
+
+.services {
+    padding: 70px 0;
+    background: white;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #0b2b3b;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #22c55e;
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+/* СЕТКА КАРТОЧЕК */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* КАРТОЧКА УСЛУГИ: иконка слева — текст справа */
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #22c55e;
+    background: white;
+}
+
+/* ИКОНКА СЛЕВА */
+.service-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ТЕКСТ СПРАВА */
+.service-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #0b2b3b;
+}
+
+.service-text p {
+    font-size: 0.9rem;
+    color: #5a6e7c;
+    line-height: 1.4;
+}
+
+/* ===== АДАПТИВ ДЛЯ МОБИЛЬНЫХ ===== */
+@media (max-width: 640px) {
+    .services h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .service-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 8px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================
+   TARIFFS
+===================== */
+
+.tariffs{
+    padding:80px 0;
+}
+
+.tariffs h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.tariff-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.tariff{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    position:relative;
+}
+
+.popular{
+    border:3px solid #22c55e;
+}
+
+.popular-tag{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#22c55e;
+    color:white;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.tariff h3{
+    margin-bottom:15px;
+}
+
+.tariff span{
+    display:block;
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.tariff h4{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.tariff button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#22c55e;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =====================
+   COVERAGE
+===================== */
+
+.coverage{
+    padding:80px 0;
+}
+
+.coverage h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.coverage-box{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.coverage-box input{
+    width:500px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+/* =====================
+   NEWS
+===================== */
+
+.news{
+    padding:80px 0;
+}
+
+.news h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.news-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.news-card img{
+    height:220px;
+    width:100%;
+    object-fit:cover;
+}
+
+.news-card h3{
+    padding:20px;
+}
+
+/* =====================
+   REVIEWS
+===================== */
+
+.reviews{
+    padding:80px 0;
+}
+
+.reviews h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.slider-track{
+    width:700px;
+    position:relative;
+}
+
+.review{
+    display:none;
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.review.active{
+    display:block;
+}
+
+.review img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.slider-btn{
+    width:50px;
+    height:50px;
+    border:none;
+    background:#22c55e;
+    color:white;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer{
+    background:#0f172a;
+    color:white;
+    padding:50px 0;
+}
+
+.footer-content{
+    text-align:center;
+}
+
+.footer-content h3{
+    margin-bottom:15px;
+}
+
+.footer-content p{
+    margin-bottom:15px;
+    color:#cbd5e1;
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width:992px){
+
+    .hero-grid,
+    .cards,
+    .services-grid,
+    .tariff-grid,
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .coverage-box{
+        flex-direction:column;
+    }
+
+    .coverage-box input{
+        width:100%;
+    }
+
+    .slider-track{
+        width:100%;
+    }
+
+    .nav-right{
+        display:none;
+    }
+}
